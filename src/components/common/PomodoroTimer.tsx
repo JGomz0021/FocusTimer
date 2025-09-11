@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
+import darkTheme from "../../themes/darkTheme/Dark"
 
 // Definimos los tiempos en segundos
 const POMODORO_TIME = 25 * 60; // 25 minutos
@@ -78,7 +79,7 @@ const PomodoroTimer: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
-  title: { fontSize: 24, marginBottom: 20 },
+  title: { fontSize: 24, marginBottom: 20, color: darkTheme.text },
   timer: { fontSize: 48, marginBottom: 20 },
 });
 

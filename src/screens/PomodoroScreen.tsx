@@ -1,8 +1,8 @@
 import React from "react";
 import { SafeAreaView, StyleSheet } from "react-native";
-import PomodoroTimer from "../components/common/PomodoroTimer"; // importa el componente creado antes
+import PomodoroTimer from "../components/common/PomodoroTimer";
+import darkTheme from "../themes/darkTheme/Dark"
 
-// Esta es la screen principal que muestra el PomodoroTimer
 const PomodoroScreen: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
@@ -12,7 +12,15 @@ const PomodoroScreen: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#fff" },
+  container: {
+    flex: 1,
+    backgroundColor: darkTheme.colors.background, // aplica el fondo oscuro
+    paddingHorizontal: 16,
+  },
+  text: {
+    color: darkTheme.colors.textPrimary, // aplica color de texto
+    fontSize: 18,
+  },
 });
 
 export default PomodoroScreen;
